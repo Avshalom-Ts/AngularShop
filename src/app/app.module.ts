@@ -4,11 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { NavBarComponent } from './header/nav-bar/nav-bar.component';
 import { HeroImageComponent } from './hero-image/hero-image.component';
 import { ProductPageComponent } from './product-page/product-page.component';
-import { ProductListComponent } from './ProductPage/product-list/product-list.component';
-import { ProductComponent } from './ProductPage/productList/product/product.component';
+import { HomeComponent } from './home/home.component';
+import { ProductListComponent } from './product-page/product-list/product-list.component';
+import { ProductComponent } from './product-page/product/product.component';
 
 @NgModule({
   declarations: [
@@ -16,15 +17,13 @@ import { ProductComponent } from './ProductPage/productList/product/product.comp
     HeaderComponent,
     NavBarComponent,
     HeroImageComponent,
+    HomeComponent,
     ProductPageComponent,
     ProductListComponent,
-    ProductComponent
+    ProductComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

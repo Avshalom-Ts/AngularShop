@@ -1,0 +1,8 @@
+aside{
+  position: absolute;
+  z-index: 1;
+  background-color: rgb(181, 181, 181);
+  width: 300px;
+  height: 100vh;
+  padding-left: 30px;
+}
