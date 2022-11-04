@@ -10,6 +10,7 @@ import { ProductPageComponent } from './product-page/product-page.component';
 import { HomeComponent } from './home/home.component';
 import { ProductListComponent } from './product-page/product-list/product-list.component';
 import { ProductComponent } from './product-page/product/product.component';
+import { ShortDescPipe } from './short-desc.pipe';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ProductComponent } from './product-page/product/product.component';
     ProductPageComponent,
     ProductListComponent,
     ProductComponent,
+    ShortDescPipe,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
