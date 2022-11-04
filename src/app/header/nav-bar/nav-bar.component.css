@@ -1,8 +1,19 @@
 aside{
   position: absolute;
   z-index: 1;
-  background-color: rgb(181, 181, 181);
+  background-color: rgba(0, 0, 0,0.6);
   width: 300px;
   height: 100vh;
+  padding-top: 2rem;
   padding-left: 30px;
+}
+.menu-label{
+  color: aliceblue;
+}
+
+.menu-list li a{
+  color: whitesmoke;
+}
+.menu-list li a:hover{
+  color: black;
 }

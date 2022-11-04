@@ -4,7 +4,13 @@
       <a (click)="amburgerToggle($event)" class="navbar-item"><span class="icon">
           <i class="fa-solid fa-bars"></i>
         </span></a>
-      <a routerLink=""><span>A</span>ngular Shop</a>
+      <a class="logo" routerLink=""><strong>A</strong>
+        <ng-container></ng-container>
+        <span [ngStyle]=" {'color': letersColor[i]}" [ngClass]="logo[i]" (pointerover)="cngColor(i)"
+          *ngFor="let item of logo;let i = index">{{item}}</span>
+      </a>
     </div>
+    <!-- <span  [ngClass]=" genClass() " (pointerover)="cngColor(item)" -->
+    <!-- <button (click)="randomCol()">press</button> -->
   </div>
 </nav>

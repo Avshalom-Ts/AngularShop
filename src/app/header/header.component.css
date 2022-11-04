@@ -1,0 +1,14 @@
+.fa-solid{
+  font-size: 2rem;
+  color: rgb(0, 168, 168);
+  margin-left: 2rem;
+}
+.logo{
+  font-size: 2rem;
+  margin-left: 3rem;
+  color: #191815;
+}
+
+.logo strong{
+  color: rgb(0, 168, 168);
+}
