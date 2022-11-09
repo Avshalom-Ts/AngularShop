@@ -1,12 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-
-interface Product {
-  _id: string;
-  price: number;
-  image: string;
-  title: string;
-  description: string;
-}
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Product } from '../Models/product.model';
 
 @Component({
   selector: 'app-product-list',
@@ -15,6 +8,7 @@ interface Product {
 })
 export class ProductListComponent implements OnInit {
   @Input() products: Product[] = [];
+  @Output() productSelected = new EventEmitter<Product>();
   constructor() {}
 
   ngOnInit(): void {}

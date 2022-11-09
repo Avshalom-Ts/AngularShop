@@ -30,14 +30,15 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  amburgerToggle(e: MouseEvent) {
-    this.EmitshowMenu.emit(e);
-    // console.log(e);
-  }
+  // amburgerToggle(e: MouseEvent) {
+  //   this.EmitshowMenu.emit(e);
+  //   // console.log(e);
+  // }
 
   cngColor(i: number) {
     this.randomCol();
     this.letersColor[i] = `rgba(${this.r},${this.g},${this.b},1)`;
+    console.log(i);
   }
 
   randomCol() {

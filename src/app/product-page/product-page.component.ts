@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+import { Product } from './Models/product.model';
 @Component({
   selector: 'app-product-page',
   templateUrl: './product-page.component.html',
@@ -101,4 +101,8 @@ export class ProductPageComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  handleProductSelected(product: Product) {
+    console.log(product);
+  }
 }

@@ -10,8 +10,8 @@ export class AppComponent {
 
   constructor() {}
 
-  ToggleSideMenu(e: MouseEvent) {
+  ToggleSideMenu() {
     this.showMenu = !this.showMenu;
-    console.log(this.showMenu);
+    // console.log(this.showMenu);
   }
 }

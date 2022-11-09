@@ -1,16 +1,25 @@
 <nav class="navbar">
   <div class="navbar-brand">
     <div class="navbar-item">
-      <a (click)="amburgerToggle($event)" class="navbar-item"><span class="icon">
+      <!-- <a (click)="amburgerToggle($event)" class="navbar-item"><span class="icon"> -->
+      <a (click)="EmitshowMenu.emit($event)" class="navbar-item"><span class="icon">
           <i class="fa-solid fa-bars"></i>
         </span></a>
       <a class="logo" routerLink=""><strong>A</strong>
-        <ng-container></ng-container>
         <span [ngStyle]=" {'color': letersColor[i]}" [ngClass]="logo[i]" (pointerover)="cngColor(i)"
           *ngFor="let item of logo;let i = index">{{item}}</span>
       </a>
     </div>
     <!-- <span  [ngClass]=" genClass() " (pointerover)="cngColor(item)" -->
     <!-- <button (click)="randomCol()">press</button> -->
+  </div>
+  <div class="navbar-end">
+    <div class="navbar-item">
+      <div class="buttons">
+        <a>
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+      </div>
+    </div>
   </div>
 </nav>
