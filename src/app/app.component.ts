@@ -12,6 +12,5 @@ export class AppComponent {
 
   ToggleSideMenu() {
     this.showMenu = !this.showMenu;
-    // console.log(this.showMenu);
   }
 }

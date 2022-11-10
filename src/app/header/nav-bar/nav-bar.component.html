@@ -2,7 +2,8 @@
   <p class="menu-label is-primary">
     Menu List
   </p>
-  <ul class="menu-list">
+  <!-- <ul (mouseout)="mouseOutLinks.emit($event)" class="menu-list"> -->
+  <ul (click)="linkPressed.emit($event)" class="menu-list">
     <li><a routerLink="">Home</a></li>
     <li><a routerLink="/about">About</a></li>
     <li><a routerLink="/products">Products</a></li>

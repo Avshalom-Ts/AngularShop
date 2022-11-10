@@ -10,7 +10,9 @@ import { ProductPageComponent } from './product-page/product-page.component';
 import { HomeComponent } from './home/home.component';
 import { ProductListComponent } from './product-page/product-list/product-list.component';
 import { ProductComponent } from './product-page/product/product.component';
-import { ShortDescPipe } from './short-desc.pipe';
+import { ShortDescPipe } from './pipes/short-desc.pipe';
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { ShortDescPipe } from './short-desc.pipe';
     ProductListComponent,
     ProductComponent,
     ShortDescPipe,
+    ContactComponent,
+    AboutComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

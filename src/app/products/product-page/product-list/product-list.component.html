@@ -1,0 +1,8 @@
+<div class="container .is-fullhd">
+  <div class="columns is-multiline">
+    <div *ngFor="let product of products" class="column is-one-quarter">
+      <app-product class="productCard" (click)="productSelected.emit(product)" [title]="product.title"
+        [desc]="product.description" [imageSrc]="product.image" [price]="product.price"></app-product>
+    </div>
+  </div>
+</div>

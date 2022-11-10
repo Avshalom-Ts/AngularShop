@@ -1,8 +1,7 @@
 <nav class="navbar">
   <div class="navbar-brand">
     <div class="navbar-item">
-      <!-- <a (click)="amburgerToggle($event)" class="navbar-item"><span class="icon"> -->
-      <a (click)="EmitshowMenu.emit($event)" class="navbar-item"><span class="icon">
+      <a (linkPressed)="oneOflinksPreesed()" (click)="EmitshowMenu.emit($event)" class="navbar-item"><span class="icon">
           <i class="fa-solid fa-bars"></i>
         </span></a>
       <a class="logo" routerLink=""><strong>A</strong>
@@ -10,8 +9,6 @@
           *ngFor="let item of logo;let i = index">{{item}}</span>
       </a>
     </div>
-    <!-- <span  [ngClass]=" genClass() " (pointerover)="cngColor(item)" -->
-    <!-- <button (click)="randomCol()">press</button> -->
   </div>
   <div class="navbar-end">
     <div class="navbar-item">
