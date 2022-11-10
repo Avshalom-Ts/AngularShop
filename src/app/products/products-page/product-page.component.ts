@@ -5,7 +5,7 @@ import { Product } from './Models/product.model';
   templateUrl: './product-page.component.html',
   styleUrls: ['./product-page.component.css'],
 })
-export class ProductPageComponent implements OnInit {
+export class ProductsPageComponent implements OnInit {
   productsList = [
     {
       _id: '63655db821c8aa26f6df652d',
