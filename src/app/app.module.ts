@@ -6,29 +6,26 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { NavBarComponent } from './header/nav-bar/nav-bar.component';
 import { HeroImageComponent } from './hero-image/hero-image.component';
-import { ProductPageComponent } from './product-page/product-page.component';
 import { HomeComponent } from './home/home.component';
-import { ProductListComponent } from './product-page/product-list/product-list.component';
-import { ProductComponent } from './product-page/product/product.component';
 import { ShortDescPipe } from './pipes/short-desc.pipe';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { ProductsRoutingModule } from './products/products-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NotFoundComponent,
     HeaderComponent,
     NavBarComponent,
     HeroImageComponent,
     HomeComponent,
-    ProductPageComponent,
-    ProductListComponent,
-    ProductComponent,
     ShortDescPipe,
     ContactComponent,
     AboutComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, ProductsRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
