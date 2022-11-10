@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { ProductsRoutingModule } from './products-routing.module';
 import { ProductsPageComponent } from './products-page/product-page.component';
-import { ProductListComponent } from './products-page/product-list/product-list.component';
-import { ProductComponent } from './products-page/product/product.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductComponent } from './product/product.component';
 import { ShortDescPipe } from '../pipes/short-desc.pipe';
 import { ProductCardComponent } from './product-card/product-card.component';
 @NgModule({
