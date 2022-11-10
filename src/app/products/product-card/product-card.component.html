@@ -13,10 +13,14 @@
       </div>
       <div class="media-content">
         <p class="title is-4"> {{title}} </p>
-        <p class="subtitle is-6">${{price}}</p>
       </div>
     </div>
     <div class="content"> {{desc | shortDesc:200}}
     </div>
+    <p class="subtitle is-6">${{price}}</p>
   </div>
+  <footer class="card-footer">
+    <a (click)="addProduct.emit($event)" class="card-footer-item">Add</a>
+    <a (click)="removeProduct.emit($event)" class="card-footer-item">Remove</a>
+  </footer>
 </div>

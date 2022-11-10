@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Product } from '../Models/product.model';
 
 @Component({
   selector: 'app-product-card',
@@ -10,6 +11,8 @@ export class ProductCardComponent implements OnInit {
   @Input() desc: string = '';
   @Input() price: number = 0;
   @Input() imageSrc: string = '';
+  @Output() addProduct = new EventEmitter<MouseEvent>();
+  @Output() removeProduct = new EventEmitter<MouseEvent>();
   constructor() {}
 
   ngOnInit(): void {}

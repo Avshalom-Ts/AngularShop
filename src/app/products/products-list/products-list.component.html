@@ -1,8 +1,11 @@
 <div class="container .is-fullhd">
   <div class="columns is-multiline">
-    <div *ngFor="let product of products" class="column is-one-quarter">
-      <app-product-card class="productCard" (click)="productSelected.emit(product)" [title]="product.title"
-        [desc]="product.description" [imageSrc]="product.image" [price]="product.price"></app-product-card>
+    <div *ngFor="let product of products;let i = index;" class="column is-one-quarter">
+      <app-product-card (removeProduct)="handleremoveProduct(product)" (addProduct)="handleAddProduct(product)"
+        [routerLink]="['item/',i]" class="productCard" [title]="product.title" [desc]="product.description"
+        [imageSrc]="product.image" [price]="product.price">
+      </app-product-card>
     </div>
   </div>
 </div>
+<!-- (click)="productSelected.emit(product)" -->
