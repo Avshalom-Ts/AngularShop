@@ -1,9 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Product } from '../Models/product.model';
 @Component({
-  selector: 'app-product-page',
-  templateUrl: './product-page.component.html',
-  styleUrls: ['./product-page.component.css'],
+  selector: 'app-products-page',
+  templateUrl: './products-page.component.html',
+  styleUrls: ['./products-page.component.css'],
 })
 export class ProductsPageComponent implements OnInit {
   productsList = [
