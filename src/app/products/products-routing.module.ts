@@ -4,16 +4,16 @@ import { ProductItemComponent } from './product-item/product-item.component';
 import { ProductsPageComponent } from './products-page/products-page.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: ProductsPageComponent,
-    children: [
-      {
-        path: 'item/:id',
-        component: ProductItemComponent,
-      },
-    ],
-  },
+  // {
+  //   path: '',
+  //   component: ProductsPageComponent,
+  //   children: [
+  //     {
+  //       path: 'item/:id',
+  //       component: ProductItemComponent,
+  //     },
+  //   ],
+  // },
 ];
 
 @NgModule({

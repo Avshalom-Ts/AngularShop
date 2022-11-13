@@ -2,7 +2,7 @@
   <div class="columns is-multiline">
     <div *ngFor="let product of products;let i = index;" class="column is-one-quarter">
       <app-product-card (removeProduct)="handleremoveProduct(product)" (addProduct)="handleAddProduct(product)"
-        [routerLink]="['item/',i]" class="productCard" [title]="product.title" [desc]="product.description"
+        [routerLink]="['/item',i]" class="productCard" [title]="product.title" [desc]="product.description"
         [imageSrc]="product.image" [price]="product.price">
       </app-product-card>
     </div>

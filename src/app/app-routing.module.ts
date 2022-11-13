@@ -4,13 +4,23 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ProductItemComponent } from './products/product-item/product-item.component';
+import { ProductsPageComponent } from './products/products-page/products-page.component';
 import { ProductsModule } from './products/products.module';
 
 const routes: Routes = [
+  // {
+  //   path: '',
+  //   loadChildren: () =>
+  //     import('./products/products.module').then((m) => m.ProductsModule),
+  // },
   {
     path: 'products',
-    loadChildren: () =>
-      import('./products/products.module').then((m) => m.ProductsModule),
+    component: ProductsPageComponent,
+  },
+  {
+    path: 'item/:id',
+    component: ProductItemComponent,
   },
   {
     path: 'about',
