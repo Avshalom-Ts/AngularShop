@@ -20,7 +20,7 @@
     <p class="subtitle is-6">${{price}}</p>
   </div>
   <footer class="card-footer">
-    <a (click)="addProduct.emit($event)" class="card-footer-item">Add</a>
-    <a (click)="removeProduct.emit($event)" class="card-footer-item">Remove</a>
+    <a (click)="addProduct.emit($event);$event.stopPropagation()" class="card-footer-item">Add</a>
+    <a (click)="removeProduct.emit($event);$event.stopPropagation()" class="card-footer-item">Remove</a>
   </footer>
 </div>

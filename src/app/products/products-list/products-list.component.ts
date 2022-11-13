@@ -16,9 +16,9 @@ import { Product } from '../Models/product.model';
 })
 export class ProductsListComponent implements OnInit {
   @Input() products: Product[] = [];
-  @Output() productSelected = new EventEmitter<Product>();
 
-  cartProducts: Product[] = [];
+  @Output() productSelected = new EventEmitter<Product>();
+  @Output() cartProducts: Product[] = [];
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {}
@@ -29,11 +29,13 @@ export class ProductsListComponent implements OnInit {
     console.log(this.cartProducts);
   }
   handleremoveProduct(removeProduct: Product) {
-    for (let i = 0; i < this.cartProducts.length; i++) {
-      if (removeProduct._id === this.cartProducts[i]._id) {
-        this.cartProducts.splice(i, 1);
-      }
-    }
+    console.log(this.cartProducts);
+    this.cartProducts = this.cartProducts.filter(
+      (p) => p._id !== removeProduct._id
+    );
+    // for (let i = 0; i < this.cartProducts.length; i++) {
+    //   if (removeProduct._id === this.cartProducts[i]._id) {
+    //   }
     console.log(this.cartProducts);
   }
 }
