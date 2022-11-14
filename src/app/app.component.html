@@ -1,5 +1,5 @@
 <app-header (EmitshowMenu)="ToggleSideMenu()"></app-header>
-<app-nav-bar *ngIf="showMenu"></app-nav-bar>
+<app-nav-bar (click)="showMenu = !showMenu" *ngIf="showMenu"></app-nav-bar>
 
 
 <router-outlet></router-outlet>

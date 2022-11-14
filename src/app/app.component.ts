@@ -13,4 +13,8 @@ export class AppComponent {
   ToggleSideMenu() {
     this.showMenu = !this.showMenu;
   }
+
+  closeAside() {
+    console.log('Mouse Out');
+  }
 }

@@ -7,6 +7,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   @Output() EmitshowMenu = new EventEmitter<MouseEvent>();
+  avshaClass = 'avsha';
   logo: string[] = ['n', 'g', 'u', 'l', 'a', 'r', ' ', 'S', 'h', 'o', 'p'];
   letersColor: string[] = [
     'rgba(0,0,0,0)',

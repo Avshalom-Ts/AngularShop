@@ -16,3 +16,10 @@
 .buttons{
   margin-right: 2rem;
 }
+
+.avsha {
+  color: rgba(0, 0, 0, 0.6);
+}
+.gone{
+  display: none;
+}
