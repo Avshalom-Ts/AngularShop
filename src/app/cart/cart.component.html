@@ -1,1 +1,26 @@
-<p>cart works!</p>
+<div class="container is-fluid">
+  <table class="table is-hoverable is-striped">
+    <thead>
+      <tr>
+        <th>Product Number</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr class="is-selected">
+        <th>Number Items in cart {{cartProducts.length}}</th>
+        <th>Total - {{totalPrice | currency:'USD'}}</th>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr *ngFor="let product of cartProducts">
+        <td>{{product._id}}</td>
+        <td>{{product.title}}</td>
+        <td>{{product.description}}</td>
+        <td>{{product.price | currency:'USD'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

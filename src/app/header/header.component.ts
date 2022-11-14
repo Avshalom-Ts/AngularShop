@@ -1,4 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { CartService } from '../cart.service';
+import { Product } from '../products/Models/product.model';
 
 @Component({
   selector: 'app-header',
@@ -6,8 +8,10 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
+  cartProductNum: number = NaN;
   @Output() EmitshowMenu = new EventEmitter<MouseEvent>();
   avshaClass = 'avsha';
+  numClass = '';
   logo: string[] = ['n', 'g', 'u', 'l', 'a', 'r', ' ', 'S', 'h', 'o', 'p'];
   letersColor: string[] = [
     'rgba(0,0,0,0)',
@@ -27,7 +31,14 @@ export class HeaderComponent implements OnInit {
   b = 0;
   a = 0;
 
-  constructor() {}
+  constructor(private cartProductList: CartService) {
+    this.cartProductNum = cartProductList.getCartList().length;
+    if (this.cartProductNum > 0) {
+      this.numClass = 'moreProducts';
+    } else {
+      this.numClass = 'zeroProducts';
+    }
+  }
 
   ngOnInit(): void {}
 

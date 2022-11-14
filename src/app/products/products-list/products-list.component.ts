@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { Product } from '../Models/product.model';
+import { CartService } from 'src/app/cart.service';
 
 @Component({
   selector: 'app-products-list',
@@ -13,12 +13,16 @@ export class ProductsListComponent implements OnInit {
   @Output() productSelected = new EventEmitter<Product>();
   @Output() cartProducts: Product[] = [];
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private cartProductList: CartService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.cartProducts = this.cartProductList.getCartList();
+    console.log(this.cartProductList);
+  }
 
   handleAddProduct(addProduct: Product) {
     // console.log(event);
+    this.cartProductList.addProduct(addProduct);
     this.cartProducts.push(addProduct);
     console.log(this.cartProducts);
   }

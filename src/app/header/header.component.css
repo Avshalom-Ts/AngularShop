@@ -23,3 +23,21 @@
 .gone{
   display: none;
 }
+
+.zeroProducts{
+  width: 1rem;
+  height: 1rem;
+  padding: 2px;
+  background-color: red;
+  border-radius: 50%;
+  color: #191815;
+}
+
+.moreProducts{
+  width: 1rem;
+  height: 1rem;
+  padding: 2px;
+  background-color: rgb(0, 168, 168);
+  border-radius: 50%;
+  color: aliceblue;
+}
