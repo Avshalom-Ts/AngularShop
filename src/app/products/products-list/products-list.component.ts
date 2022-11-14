@@ -1,11 +1,4 @@
-import {
-  Component,
-  OnInit,
-  Input,
-  Output,
-  EventEmitter,
-  SimpleChanges,
-} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from '../Models/product.model';
 
@@ -19,6 +12,7 @@ export class ProductsListComponent implements OnInit {
 
   @Output() productSelected = new EventEmitter<Product>();
   @Output() cartProducts: Product[] = [];
+
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {}
@@ -26,8 +20,9 @@ export class ProductsListComponent implements OnInit {
   handleAddProduct(addProduct: Product) {
     // console.log(event);
     this.cartProducts.push(addProduct);
-    console.log(this.cartProducts);
+    // console.log(this.cartProducts);
   }
+
   handleremoveProduct(removeProduct: Product) {
     console.log(this.cartProducts);
     this.cartProducts = this.cartProducts.filter(
@@ -36,6 +31,6 @@ export class ProductsListComponent implements OnInit {
     // for (let i = 0; i < this.cartProducts.length; i++) {
     //   if (removeProduct._id === this.cartProducts[i]._id) {
     //   }
-    console.log(this.cartProducts);
+    // console.log(this.cartProducts);
   }
 }
