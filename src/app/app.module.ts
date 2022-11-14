@@ -11,6 +11,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductsRoutingModule } from './products/products-routing.module';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ProductsRoutingModule } from './products/products-routing.module';
     HomeComponent,
     ContactComponent,
     AboutComponent,
+    CartComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ProductsRoutingModule],
   providers: [],

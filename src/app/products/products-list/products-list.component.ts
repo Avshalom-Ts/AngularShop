@@ -20,7 +20,7 @@ export class ProductsListComponent implements OnInit {
   handleAddProduct(addProduct: Product) {
     // console.log(event);
     this.cartProducts.push(addProduct);
-    // console.log(this.cartProducts);
+    console.log(this.cartProducts);
   }
 
   handleremoveProduct(removeProduct: Product) {
@@ -31,6 +31,6 @@ export class ProductsListComponent implements OnInit {
     // for (let i = 0; i < this.cartProducts.length; i++) {
     //   if (removeProduct._id === this.cartProducts[i]._id) {
     //   }
-    // console.log(this.cartProducts);
+    console.log(this.cartProducts);
   }
 }
